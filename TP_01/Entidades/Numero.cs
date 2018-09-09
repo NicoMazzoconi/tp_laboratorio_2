@@ -20,11 +20,7 @@ namespace Entidades
 		}
 		public Numero(string strNum) 
 		{
-			double d;
-			if (double.TryParse(strNum, out d))
-				this.numero = d;
-			else
-				this.numero = 0;
+			this.SetNumero = strNum;
 		}
 		private static double ValidarNumero(string strNumero)
 		{

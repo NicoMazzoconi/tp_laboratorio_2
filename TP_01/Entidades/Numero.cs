@@ -26,11 +26,14 @@ namespace Entidades
 		{
 			if (!(strNumero is null))
 			{
-				for (int i = 0; i < strNumero.Length; i++)
-				{
-					if (strNumero[i] < '0' || strNumero[i] > '9')
-						return 0;
-				}
+				if (strNumero.Length > 0)
+					for (int i = 0; i < strNumero.Length; i++)
+					{
+						if (strNumero[i] < '0' || strNumero[i] > '9')
+							return 0;
+					}
+				else
+					return 0;
 
 				return double.Parse(strNumero);
 			}

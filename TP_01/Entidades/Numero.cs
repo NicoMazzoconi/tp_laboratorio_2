@@ -14,14 +14,15 @@ namespace Entidades
 		{
 			this.numero = 0;
 		}
-		public Numero(double num)
-		{
-			this.numero = num;
-		}
+
+		public Numero(double num)	:this(num.ToString())
+		{		}
+
 		public Numero(string strNum) 
 		{
-			this.SetNumero = strNum;
+			SetNumero = strNum;
 		}
+
 		private static double ValidarNumero(string strNumero)
 		{
 			if (!(strNumero is null))

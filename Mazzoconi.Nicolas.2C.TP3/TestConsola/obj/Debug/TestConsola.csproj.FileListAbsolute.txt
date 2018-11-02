@@ -1,0 +1,16 @@
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\TestConsola.exe.config
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\TestConsola.exe
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\TestConsola.pdb
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Archivos.dll
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Clases Abstractas.dll
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Clases Instanciables.dll
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Excepciones.dll
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Archivos.pdb
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Clases Abstractas.pdb
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Clases Instanciables.pdb
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\bin\Debug\Excepciones.pdb
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\obj\Debug\TestConsola.csprojAssemblyReference.cache
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\obj\Debug\TestConsola.csproj.CoreCompileInputs.cache
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\obj\Debug\TestConsola.csproj.CopyComplete
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\obj\Debug\TestConsola.exe
+C:\Users\NiCO\Desktop\tp_laboratorio_2\Mazzoconi.Nicolas.2C.TP3\TestConsola\obj\Debug\TestConsola.pdb

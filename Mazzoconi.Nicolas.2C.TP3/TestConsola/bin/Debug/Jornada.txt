@@ -1,0 +1,6 @@
+Clase: Laboratorio.
+Profesor: 
+	Nombre completo: Juan Lopez, Dni: 12234456, Nacionalidad: Argentino, Legajo: 1 CLASES DEL DIA Laboratorio Legislacion 
+Alumnos:
+	Nombre completo: Joaquin Suarez, Dni: 91122456, Nacionalidad: Extranjero, Legajo: 7 TOMA CLASE DE Laboratorio, su estado es: AlDia
+

@@ -57,7 +57,7 @@ namespace Entidades
 			StringBuilder sb = new StringBuilder();
 			foreach (Paquete p in paquetes)
 			{
-				sb.AppendLine(p.ToString());
+				sb.AppendLine(p.MostrarDatos());
 			}
 			return sb.ToString();
 		}

@@ -35,6 +35,7 @@ namespace TP_04
 			if(elemento != null)
 			{
 				rtbMostrar.Text = elemento.MostrarDatos();
+
 				try
 				{
 					GuardarString.Guardar(elemento.MostrarDatos(), "salida.txt");
@@ -51,6 +52,7 @@ namespace TP_04
 			Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
 			try
 			{
+				p.ErrorSql += ErrorSql;
 				correo += p;
 				p.InformarEstado += ActualizarEstados;
 				ActualizarEstados();
@@ -74,13 +76,13 @@ namespace TP_04
 					switch (p.Estado)
 					{
 						case Paquete.EEstado.Entregado:
-							lstEstadoEntregado.Items.Add(p.MostrarDatos());
+							lstEstadoEntregado.Items.Add(p);
 							break;
 						case Paquete.EEstado.EnViaje:
-							lstEstadoEnViaje.Items.Add(p.MostrarDatos());
+							lstEstadoEnViaje.Items.Add(p);
 							break;
 						case Paquete.EEstado.Ingresado:
-							lstEstadoIngresado.Items.Add(p.MostrarDatos());
+							lstEstadoIngresado.Items.Add(p);
 							break;
 					}
 				}
@@ -100,6 +102,11 @@ namespace TP_04
 		private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
 		{
 
+		}
+
+		private void ErrorSql(string mensaje)
+		{
+			MessageBox.Show(mensaje);
 		}
 
 		private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)

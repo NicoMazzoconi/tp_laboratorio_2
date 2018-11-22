@@ -11,6 +11,9 @@ namespace Entidades
 		public delegate void DelegadoEstado();
 		public event DelegadoEstado InformarEstado;
 
+		public delegate void DelegadoErrorSql(string mensaje);
+		public event DelegadoErrorSql ErrorSql;
+
 		private string direccionEntrega;
 		private EEstado estado;
 		private string trackingID;
@@ -123,14 +126,13 @@ namespace Entidades
 				}
 				InformarEstado.Invoke();
 			}
-
 			try
 			{
 				PaqueteDAO.Insertar(this);
 			}
 			catch(Exception ex)
 			{
-				throw ex;
+				ErrorSql.Invoke(ex.Message);
 			}
 		}
 
@@ -140,7 +142,7 @@ namespace Entidades
 		/// <returns>La string</returns>
 		public string MostrarDatos()
 		{
-			return string.Format("{0} para {1}", this.TrackingID, this.DireccionEntrega);
+			return string.Format("{0} ({1})", this.ToString(), this.Estado);
 		}
 
 		/// <summary>
@@ -150,7 +152,7 @@ namespace Entidades
 		public override string ToString()
 		{
 			StringBuilder sb = new StringBuilder();
-			sb.AppendFormat("{0} ({1})", MostrarDatos(), Estado);
+			sb.AppendFormat("{0} para {1}", this.TrackingID, this.DireccionEntrega);
 			return sb.ToString();
 		}
 	}

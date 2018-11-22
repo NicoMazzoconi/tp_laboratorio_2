@@ -32,7 +32,7 @@ namespace Entidades
 		{
 			try
 			{
-				comando.CommandText = "INSERT INTO correo-sp-2017 (direccionEntrega, trackingID, alumno) VALUES ('" + p.DireccionEntrega + "', '" + p.TrackingID + "', Nicolas.Mazzoconi)";
+				comando.CommandText = "INSERT INTO correo-sp-2017 (direccionEntrega, trackingID, alumno) VALUES ('" + p.DireccionEntrega + "', '" + p.TrackingID + "', 'Nicolas.Mazzoconi')";
 				conexion.Open();
 				comando.ExecuteNonQuery();
 				conexion.Close();

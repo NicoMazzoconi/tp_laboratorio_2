@@ -46,6 +46,7 @@
 			this.txtDireccion = new System.Windows.Forms.TextBox();
 			this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
 			this.rtbMostrar = new System.Windows.Forms.RichTextBox();
+			this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.groupBox1.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -85,6 +86,7 @@
 			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Estados Paquetes";
+			this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
 			// 
 			// lblEstadoEntregado
 			// 
@@ -210,6 +212,11 @@
 			this.rtbMostrar.TabIndex = 4;
 			this.rtbMostrar.Text = "";
 			// 
+			// contextMenuStrip2
+			// 
+			this.contextMenuStrip2.Name = "contextMenuStrip2";
+			this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+			// 
 			// FrmPpal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +257,7 @@
 		private System.Windows.Forms.RichTextBox rtbMostrar;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
 	}
 }
 

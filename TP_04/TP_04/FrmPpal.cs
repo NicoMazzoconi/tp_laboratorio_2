@@ -54,7 +54,7 @@ namespace TP_04
 			{
 				p.ErrorSql += ErrorSql;
 				correo += p;
-				p.InformarEstado += ActualizarEstados;
+				p.InformarEstado += paq_informar;
 				ActualizarEstados();
 			}
 			catch(Exception ex)
@@ -65,8 +65,8 @@ namespace TP_04
 
 		private void ActualizarEstados()
 		{
-			if (!(lstEstadoEntregado.InvokeRequired && lstEstadoEnViaje.InvokeRequired && lstEstadoIngresado.InvokeRequired))
-			{
+			//if (!(lstEstadoEntregado.InvokeRequired && lstEstadoEnViaje.InvokeRequired && lstEstadoIngresado.InvokeRequired))
+			//{
 				lstEstadoEntregado.Items.Clear();
 				lstEstadoEnViaje.Items.Clear();
 				lstEstadoIngresado.Items.Clear();
@@ -86,14 +86,26 @@ namespace TP_04
 							break;
 					}
 				}
+			//}
+			/*else
+			{
+				/*Paquete.DelegadoEstado recall = new Paquete.DelegadoEstado(this.ActualizarEstados);
+				this.Invoke(recall, new object[] {});*/
+			//}*/
+		}
+
+		private void paq_informar(object sender, EventArgs e)
+		{
+			if (this.InvokeRequired)
+			{
+				Paquete.DelegadoEstado d = new Paquete.DelegadoEstado(paq_informar);
+				this.Invoke(d, new object[] { sender, e });
 			}
 			else
 			{
-				Paquete.DelegadoEstado recall = new Paquete.DelegadoEstado(this.ActualizarEstados);
-				this.Invoke(recall, new object[] {});
+				ActualizarEstados();
 			}
 		}
-
 		private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			correo.FinEntregas();
@@ -112,6 +124,11 @@ namespace TP_04
 		private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

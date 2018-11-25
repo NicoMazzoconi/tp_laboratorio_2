@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Paquete	:IMostrar<Paquete>
     {
-		public delegate void DelegadoEstado();
+		public delegate void DelegadoEstado(object a, EventArgs e);
 		public event DelegadoEstado InformarEstado;
 
 		public delegate void DelegadoErrorSql(string mensaje);
@@ -124,7 +124,7 @@ namespace Entidades
 				{
 					estado = EEstado.Entregado;
 				}
-				InformarEstado.Invoke();
+				InformarEstado.Invoke(new object { }, EventArgs.Empty);
 			}
 			try
 			{
